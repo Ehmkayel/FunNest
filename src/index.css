@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* body {
+    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+} */
+
+@layer base {
+    body {
+      @apply font-body;
+    }
+  }
+  
+
+
+.heading{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.mobile-nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+  
+  .mobile-nav-container.open {
+    transform: translateX(0);
+  }
+  
+  .mobile-nav-overlay {
+    flex: 1;
+  }
+  
+  .mobile-nav-menu {
+    width: 80%;
+    max-width: 320px;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  
