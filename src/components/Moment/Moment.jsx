@@ -6,7 +6,7 @@ import { aboutFeatures } from '../Data/Data'
 const Moment = () => {
   return (
     <main className="px-4 lg:px-[3rem] xl:px-[5rem] pt-[3rem] md:pt-0">
-      <section className="flex flex-col-reverse md:flex-row h-[700px] md:h-[600px] xl:h-[700px] items-center container justify-between max-w-[1440px] w-full mx-auto">
+      <section className="flex flex-col-reverse md:flex-row h-[700px] md:h-[600px] xl:h-[700px] items-center container justify-between max-w-[1440px] w-full mx-auto" id="about">
         <figure
           className="w-64 h-64 md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] rounded-lg overflow-hidden flex-shrink-0 bg-cover bg-center transform transition duration-500 hover:scale-105"
           style={{ backgroundImage: `url(${assets.moment})` }}
