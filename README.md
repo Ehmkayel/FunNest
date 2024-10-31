@@ -1,7 +1,7 @@
 # FunNest
 
 Project Name: FunNest
-This is the final team group project for #3MTT
+- This is the final team group project for #3MTT
 
 
 ## Table of Contents
@@ -80,6 +80,8 @@ http://localhost:3000 to view the application.
 - Tailwind CSS
 - Mobile-first workflow
 - TailwindCSS custom properties
+- Swiper
+- Framer-motion
 
 
 ### Contributing
