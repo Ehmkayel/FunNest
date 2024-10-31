@@ -9,6 +9,10 @@
     font-style: normal;
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
     body {
       @apply font-body;
@@ -55,4 +59,10 @@
     gap: 1rem;
   }
   
+  .active-link {
+    border-bottom: 2px solid blue; 
+    color: #facc15;
+  }
+
+
   

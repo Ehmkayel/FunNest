@@ -15,8 +15,8 @@ const Gallery = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="px-4 lg:px-[3rem] xl:px-[5rem] pt-[5rem] md:pt-0">
-      <h2 className="text-3xl font-bold text-center mb-8 text-primary heading">Our Gallery</h2>
+    <section className="px-4 lg:px-[3rem] xl:px-[5rem] pt-[3rem] md:pt-0" id="gallery">
+      <h2 className="text-3xl font-bold text-center mb-8 text-primary heading">Gallery</h2>
       <Swiper
         ref={swiperRef}
         spaceBetween={30}
@@ -66,7 +66,7 @@ const Gallery = () => {
           <FaArrowRight/>
         </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

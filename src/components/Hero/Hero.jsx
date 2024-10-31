@@ -17,7 +17,7 @@ const Hero = () => {
           </span>
         </figcaption>
         <figure
-          className="w-64 h-64 md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] rounded-lg md:rounded-full overflow-hidden flex-shrink-0 bg-cover bg-center transform transition duration-500 hover:scale-105"
+          className="w-64 h-64 md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] rounded-full overflow-hidden flex-shrink-0 bg-cover bg-center transform transition duration-500 hover:scale-105"
           style={{ backgroundImage: `url(${assets.hero})` }}
           alt="Kids playing games"
         />
