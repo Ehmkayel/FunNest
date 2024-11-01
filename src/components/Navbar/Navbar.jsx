@@ -51,8 +51,8 @@ const Navbar = () => {
           <a href="#about" className={activeSection === "about" ? "active-link" : ""}>About</a>
           <a href="#events" className={activeSection === "events" ? "active-link" : ""}>Events</a>
           <a href="#gallery" className={activeSection === "gallery" ? "active-link" : ""}>Gallery</a>
-          <a href="#faq" className={activeSection === "faq" ? "active-link" : ""}>FAQ</a>
-          <a href="#contact" className={activeSection === "contact" ? "active-link" : ""}>Contact</a>
+          <a href="#features" className={activeSection === "faq" ? "active-link" : ""}>Features</a>
+          <a href="#footer" className={activeSection === "contact" ? "active-link" : ""}>Contact</a>
           <Button link="/">Community</Button>
         </nav>
         
@@ -80,8 +80,8 @@ const Navbar = () => {
             <a href="#about" className="block" onClick={toggleMobileNav}>About</a>
             <a href="#events" className="block" onClick={toggleMobileNav}>Events</a>
             <a href="#gallery" className="block" onClick={toggleMobileNav}>Gallery</a>
-            <a href="#faq" className="block" onClick={toggleMobileNav}>FAQ</a>
-            <a href="#contact" className="block" onClick={toggleMobileNav}>Contact</a>
+            <a href="#features" className="block" onClick={toggleMobileNav}>Features</a>
+            <a href="#footer" className="block" onClick={toggleMobileNav}>Contact</a>
             <Button link="/" onClick={toggleMobileNav}>Community</Button>
           </div>
         </div>
