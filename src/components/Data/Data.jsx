@@ -1,7 +1,6 @@
 import { FaCalendar, FaCameraRetro, FaFile, FaUser } from "react-icons/fa"
 import { assets } from '../../assets/assets'
 
-
 export const aboutFeatures = [
   {
     id: 1,
