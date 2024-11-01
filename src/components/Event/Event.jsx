@@ -10,12 +10,12 @@ const Events = () => {
   );
 
   return (
-    <section id="events" className="py-16 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="events" className="py-16 px-4 g:px-[3rem] xl:px-[5rem] pt-[3rem] bg-gray-100">
+      <div className="max-w-[1440px] w-full mx-auto">
         <h2 className="text-3xl font-semibold mb-6 text-center">
           Upcoming Events
         </h2>
-        <div className="mb-8">
+        <div className="mb-8 max-w-xl mx-auto">
           <input
             type="text"
             placeholder="Search events..."
@@ -46,7 +46,7 @@ const Events = () => {
                   {event.location}
                 </p>
                 <p className="text-gray-700 mb-4">{event.description}</p>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                <button className="bg-secondary text-white font-bold px-4 py-2 rounded hover:bg-blue-600">
                   <FaInfoCircle className="inline mr-1" /> More Info
                 </button>
               </div>
