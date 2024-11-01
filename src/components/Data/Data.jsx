@@ -1,3 +1,5 @@
+import { FaCalendar, FaCameraRetro, FaFile, FaUser } from "react-icons/fa"
+import { assets } from '../../assets/assets'
 import {
   FaCalendar,
   FaCameraRetro,
@@ -10,7 +12,8 @@ import {
   FaLightbulb,
   FaHandsHelping,
 } from "react-icons/fa";
-import { assets } from "../../assets/assets";
+
+
 
 export const aboutFeatures = [
   {
