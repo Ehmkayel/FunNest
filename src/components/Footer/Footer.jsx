@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer id="footer" className="bg-gray-900 text-white py-8 px-4">
-      <div className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="max-w-[1440px] mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {/* Company Info */}
         <div>
           <h2 className="text-lg font-semibold mb-4">About Us</h2>
@@ -70,7 +70,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600"
+              className="px-4 py-2 bg-secondary font-bold text-white rounded-r-md hover:bg-blue-600"
             >
               Subscribe
             </button>

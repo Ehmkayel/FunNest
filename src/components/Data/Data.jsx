@@ -1,4 +1,3 @@
-import { FaCalendar, FaCameraRetro, FaFile, FaUser } from "react-icons/fa"
 import { assets } from '../../assets/assets'
 import {
   FaCalendar,
