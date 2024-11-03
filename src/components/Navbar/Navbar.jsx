@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Button from "../Reusable/Button"
-import CommunityPrompt from "../../pages/Dashboard/Community/CommunityPrompt"
+import { NavLink } from "react-router-dom"
+
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
@@ -84,7 +85,7 @@ const Navbar = () => {
             <a href="#gallery" className="block" onClick={toggleMobileNav}>Gallery</a>
             <a href="#features" className="block" onClick={toggleMobileNav}>Features</a>
             <a href="#footer" className="block" onClick={toggleMobileNav}>Contact</a>
-            <Button link="/" onClick={toggleMobileNav}>Community</Button>
+            <NavLink to="/community-prompt" onClick={toggleMobileNav} className="bg-secondary border border-primary hover:bg-primary hover:text-secondary px-4 py-2 flex justify-center items-center rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Community</NavLink>
           </div>
         </div>
       </div>
