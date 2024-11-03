@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
 import Button from "../Reusable/Button"
+import CommunityPrompt from "../../pages/Dashboard/Community/CommunityPrompt"
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen)
@@ -53,7 +55,7 @@ const Navbar = () => {
           <a href="#gallery" className={activeSection === "gallery" ? "active-link" : ""}>Gallery</a>
           <a href="#features" className={activeSection === "faq" ? "active-link" : ""}>Features</a>
           <a href="#footer" className={activeSection === "contact" ? "active-link" : ""}>Contact</a>
-          <Button link="/">Community</Button>
+          <Button link="/community-prompt">Community</Button>
         </nav>
         
         {/* Mobile Navigation Button */}
