@@ -110,7 +110,62 @@ export const eventsData = [
       "Celebrate the holiday season with a family-friendly carnival featuring games, food stalls, live music, and fun activities for kids of all ages.",
     image: assets.holiday_festival,
   },
+  {
+    id: 4,
+    title: "Science and Discovery Camp",
+    date: "January 10, 2025",
+    location: "Civic Center, Lagos",
+    description:
+      "An educational camp that inspires children to explore the wonders of science through interactive exhibits and exciting experiments.",
+    image: assets.discovery_camp,
+  },
+  {
+    id: 5,
+    title: "Outdoor Adventure Trek",
+    date: "January 20, 2025",
+    location: "Idanre Hills, Ondo State",
+    description:
+      "Bring the family for a thrilling day of hiking and exploration at the scenic Idanre Hills. Perfect for nature lovers and adventurers!",
+    image: assets.adventure_trek,
+  },
+  {
+    id: 6,
+    title: "Children’s Literature and Storytelling Festival",
+    date: "February 5, 2025",
+    location: "Freedom Park, Lagos",
+    description:
+      "Immerse your children in the magic of storytelling with live performances and book readings by popular Nigerian authors.",
+    image: assets.literature_festival,
+  },
+  {
+    id: 7,
+    title: "African Drumming and Dance Workshop",
+    date: "February 15, 2025",
+    location: "National Theatre, Lagos",
+    description:
+      "Kids can experience the joy of African music by learning basic drumming techniques and traditional dances from seasoned instructors.",
+    image: assets.drum_dance,
+  },
+  {
+    id: 8,
+    title: "Children’s Yoga and Mindfulness Retreat",
+    date: "February 25, 2025",
+    location: "Alchemist Café, Lagos",
+    description:
+      "A calming retreat designed to introduce children to yoga and mindfulness exercises, helping them relax and focus.",
+    image: assets.yoga_retreat,
+  },
+  {
+    id: 9,
+    title: "Junior Chef Cooking Class",
+    date: "March 3, 2025",
+    location: "Chef's Academy, Lagos",
+    description:
+      "Kids can join professional chefs for a hands-on cooking class, where they’ll learn to make fun and healthy meals.",
+    image: assets.cooking_class,
+  }
 ];
+
 
 export const images = [
   assets.entertainment,

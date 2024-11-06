@@ -19,6 +19,12 @@ import communitySupportImg from "./communitySupportImg.webp";
 import picnic from "./picnic.png";
 import art_workshop from "./art_workshop.png";
 import holiday_festival from "./holiday_festival.png";
+import discovery_camp from "./discovery_camp.png";
+import adventure_trek from "./adventure_trek.png";
+import literature_festival from "./literature_festival.png";
+import drum_dance from "./drum_dance.png";
+import yoga_retreat from "./yoga_retreat.png";
+import cooking_class from "./cooking_class.png";
 
 export const assets = {
   hero,
@@ -42,4 +48,10 @@ export const assets = {
   picnic,
   art_workshop,
   holiday_festival,
+  discovery_camp,
+  adventure_trek,
+  literature_festival,
+  drum_dance,
+  yoga_retreat,
+  cooking_class,
 };
