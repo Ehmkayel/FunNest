@@ -1,105 +1,84 @@
-import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import React from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
-const ParticleTunnel = () => {
+const ParticleBackground = () => {
+  // Initialize particles library
   const particlesInit = async (main) => {
     await loadFull(main);
   };
 
+  // Optional: Callback when particles are loaded
+  const particlesLoaded = (container) => {};
+
+  // Your JSON config as a JavaScript object:
   const options = {
-    fpsLimit: 30, // Limit frame rate for performance
-    particles: {
-      number: {
-        value: 100, // Increase particle count for a denser effect
-        density: {
-          enable: true,
-          value_area: 800, // Adjust area for particle density
-        },
-      },
-      move: {
-        enable: true,
-        speed: 6, // Faster speed to simulate movement through the tunnel
-        direction: 'top', // Move particles upward for the tunnel effect
-        random: false,
-        straight: false,
-        outModes: {
-          top: 'out', // Move particles out when they reach the top
-        },
-        attract: {
-          enable: true,
-          rotateX: 600,
-          rotateY: 1200,
-        },
-      },
-      shape: {
-        type: 'circle', // Circular particles work best for a tunnel effect
-      },
-      opacity: {
-        value: 0.7,
-        random: true,
-        animation: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0.1,
-        },
-      },
-      size: {
-        value: 3,
-        random: true,
-        animation: {
-          enable: true,
-          speed: 5,
-          size_min: 0.1,
-        },
-      },
-      links: {
-        enable: false, // Disable particle links for a cleaner effect
-      },
+    autoPlay: true,
+    background: {
+      color: { value: "#000000" },
+      image: "",
+      position: "50% 50%",
+      repeat: "no-repeat",
+      size: "cover",
+      opacity: 1
     },
+    backgroundMask: {
+      composite: "destination-out",
+      cover: {
+        color: { value: "#fff" },
+        opacity: 1
+      },
+      enable: false
+    },
+    fullScreen: {
+      enable: true,
+      zIndex: 0
+    },
+    detectRetina: true,
+    fpsLimit: 120,
     interactivity: {
+      detectsOn: "window",
       events: {
+        onClick: { enable: true, mode: "push" },
         onHover: {
           enable: true,
-          mode: 'repulse',
-        },
-        onClick: {
-          enable: true,
-          mode: 'push',
-        },
-      },
+          mode: "connect",
+          parallax: {
+            enable: false,
+            force: 60,
+            smooth: 10
+          }
+        }
+      }
     },
-    background: {
-      color: "#000", // Dark background for tunnel effect
+    particles: {
+      number: { value: 300 },
+      color: { value: "random" },
+      size: { value: { min: 10, max: 15 } },
+      move: { speed: 6 },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 }
     },
-    emitters: {
-      position: { x: '50%', y: '50%' },
-      rate: {
-        delay: 0.1,
-        quantity: 10,
-      },
-      size: {
-        width: '100%',
-        height: '100%',
-      },
-    },
+    links: {
+      enable: true,
+      color: "#ffffff",
+      distance: 150
+    }
   };
 
   return (
-    <Particles 
-      id="tsparticles" 
-      init={particlesInit} 
-      options={options} 
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: -1,
-      }} 
-    />
+    <div>
+      {/* Pass the options as a prop to the Particles component */}
+      <Particles
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={options} // Apply the config here
+      />
+      <div className="content">
+        {/* Your other content goes here */}
+      </div>
+    </div>
   );
 };
 
-export default ParticleTunnel;
+export default ParticleBackground;

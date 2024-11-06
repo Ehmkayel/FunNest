@@ -4,6 +4,7 @@ import Moment from "../../components/Moment/Moment";
 import Gallery from "../../components/Gallery/Gallery";
 import Features from "../../components/Features/Features";
 import Events from "../../components/Event/Event";
+import Contact from "../../components/Contact/Contact";
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       <Gallery />
       <Features />
       <Events />
+      <Contact/>
     </>
   );
 };

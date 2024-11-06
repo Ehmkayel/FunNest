@@ -11,7 +11,7 @@ import {
   FaLightbulb,
   FaHandsHelping,
 } from "react-icons/fa";
-
+import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi'
 
 
 export const aboutFeatures = [
@@ -125,3 +125,21 @@ export const images = [
   assets.blossom,
   assets.hero,
 ];
+
+export const contact = [
+  {
+    id: 1,
+    icon: <FiMapPin color= "blue"/>,
+    paragraph: '24, journalist road, ILORIN '
+  },
+  {
+    id: 2,
+    icon: <FiMail color="blue"/>,
+    paragraph: 'funNest@business.org'
+  },
+  {
+    id: 3,
+    icon: <FiPhone color="blue"/>,
+    paragraph: '08104569867'
+  }
+]
