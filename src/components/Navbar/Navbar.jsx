@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react"
 import Button from "../Reusable/Button"
+import { NavLink } from "react-router-dom"
+
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen)
@@ -53,7 +56,7 @@ const Navbar = () => {
           <a href="#gallery" className={activeSection === "gallery" ? "active-link" : ""}>Gallery</a>
           <a href="#features" className={activeSection === "faq" ? "active-link" : ""}>Features</a>
           <a href="#footer" className={activeSection === "contact" ? "active-link" : ""}>Contact</a>
-          <Button link="/">Community</Button>
+          <Button link="/community-prompt">Community</Button>
         </nav>
         
         {/* Mobile Navigation Button */}
@@ -82,7 +85,7 @@ const Navbar = () => {
             <a href="#gallery" className="block" onClick={toggleMobileNav}>Gallery</a>
             <a href="#features" className="block" onClick={toggleMobileNav}>Features</a>
             <a href="#footer" className="block" onClick={toggleMobileNav}>Contact</a>
-            <Button link="/" onClick={toggleMobileNav}>Community</Button>
+            <NavLink to="/community-prompt" onClick={toggleMobileNav} className="bg-secondary border border-primary hover:bg-primary hover:text-secondary px-4 py-2 flex justify-center items-center rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Community</NavLink>
           </div>
         </div>
       </div>

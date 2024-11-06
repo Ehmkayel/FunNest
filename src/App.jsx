@@ -4,6 +4,7 @@ import Layout from "./components/Layout/Layout";
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
+import CommunityPrompt from "./pages/Dashboard/Community/CommunityPrompt";
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,16 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register/>
-      }
+      },
+      {
+        path: 'register',
+        element: <Register/>
+      },
+      {
+        path: 'community-prompt',
+        element: <CommunityPrompt/>
+      },
+
     ]
   }
 ])
