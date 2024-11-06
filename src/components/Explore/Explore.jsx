@@ -6,7 +6,7 @@ const Explore = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [filteredEvents, setFilteredEvents] = useState(eventsData);
-  const [visibleDescriptions, setVisibleDescriptions] = useState({}); // Track which descriptions are visible
+  const [visibleDescriptions, setVisibleDescriptions] = useState({});
 
   const handleSearch = (e) => {
     const value = e.target.value;
@@ -63,7 +63,7 @@ const Explore = () => {
         {filteredEvents.map(event => (
           <div key={event.id} className="bg-white p-4 rounded-lg shadow-md">
             <img
-              src={assets[event.image.split('/').pop().split('.')[0]]}
+              src={event.image ? assets[event.image.split('/').pop().split('.')[0]] : assets.defaultImage}
               alt={event.title}
               className="w-full h-48 object-cover rounded-md mb-4"
             />

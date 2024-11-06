@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaCalendarAlt, FaMapMarkerAlt, FaInfoCircle } from "react-icons/fa";
 import { eventsData } from "../Data/Data";
 
@@ -10,7 +11,10 @@ const Events = () => {
   );
 
   return (
-    <section id="events" className="py-16 px-4 g:px-[3rem] xl:px-[5rem] pt-[3rem] bg-gray-100">
+    <section
+      id="events"
+      className="py-16 px-4 g:px-[3rem] xl:px-[5rem] pt-[3rem] bg-gray-100"
+    >
       <div className="max-w-[1440px] w-full mx-auto">
         <h2 className="text-3xl font-semibold mb-6 text-center">
           Upcoming Events
@@ -25,7 +29,7 @@ const Events = () => {
           />
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredEvents.map((event) => (
+          {filteredEvents.slice(0, 3).map((event) => (
             <div
               key={event.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
@@ -46,9 +50,11 @@ const Events = () => {
                   {event.location}
                 </p>
                 <p className="text-gray-700 mb-4">{event.description}</p>
-                <button className="bg-secondary text-white font-bold px-4 py-2 rounded hover:bg-blue-600">
-                  <FaInfoCircle className="inline mr-1" /> More Info
-                </button>
+                <Link to="/explore-prompt">
+                  <button className="bg-secondary text-white font-bold px-4 py-2 rounded hover:bg-blue-600">
+                    <FaInfoCircle className="inline mr-1" /> More Info
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
