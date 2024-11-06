@@ -5,42 +5,41 @@ import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import CommunityPrompt from "./pages/Dashboard/Community/CommunityPrompt";
-
+import ExplorePage from "./pages/Explore_Page/ExplorePage";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Layout/>,
+    path: "/",
+    element: <Layout />,
     children: [
       {
         index: true,
-        element: <Landing/>
+        element: <Landing />,
       },
       {
-        path: 'login',
-        element: <Login/>
+        path: "login",
+        element: <Login />,
       },
       {
-        path: 'register',
-        element: <Register/>
+        path: "register",
+        element: <Register />,
       },
       {
-        path: 'register',
-        element: <Register/>
+        path: "community-prompt",
+        element: <CommunityPrompt />,
       },
       {
-        path: 'community-prompt',
-        element: <CommunityPrompt/>
+        path: "explore",
+        element: <ExplorePage />,
       },
+    ],
+  },
+]);
 
-    ]
-  }
-])
-
-export default function App (){
-  return(
+export default function App() {
+  return (
     <React.StrictMode>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </React.StrictMode>
-  )
+  );
 }
