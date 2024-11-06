@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
           <span className="relative inline-flex items-center">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
-            <Link to="/explore">
+            <Link to="/explore-prompt">
               <Button className="bg-yellow-400 hover:bg-yellow-500 relative z-10">
                 Explore Now
               </Button>

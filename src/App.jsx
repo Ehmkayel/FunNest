@@ -4,17 +4,17 @@ import Layout from "./components/Layout/Layout";
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
-import CommunityPrompt from "./pages/Dashboard/Community/CommunityPrompt";
-import ExplorePage from "./pages/Explore_Page/ExplorePage";
+import CommunityPrompt from "./pages/Dashboard/ParentDashboard/Community/CommunityPrompt";
 import ParentDashboard from "./pages/Dashboard/ParentDashboard/ParentDashboard";
 import DashboardLayout from "./components/Layout/DashboardLayout";
-import Explore from "./pages/Dashboard/ParentDashboard/Explore/Explore";
 import Community from "./pages/Dashboard/ParentDashboard/Community/Community";
 import Recommendations from "./pages/Dashboard/ParentDashboard/Recommendations/Recommendations";
 import SafetyForm from "./pages/Dashboard/ParentDashboard/SafetyForm/SafetyForm";
 import Notification from "./pages/Dashboard/ParentDashboard/Notification";
 import Feedback from "./pages/Dashboard/ParentDashboard/Feedback/Feedback";
 import EventsDetails from "./pages/Dashboard/ParentDashboard/Events/Events";
+import ExploreEvents from "./pages/Dashboard/ParentDashboard/Explore/Explore";
+import ExplorePrompt from "./pages/Dashboard/ParentDashboard/Explore/ExplorePrompt";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'explore-events',
-        element: <Explore/>
+        element: <ExploreEvents/>
       },
       {
         path: 'community',
@@ -77,8 +77,8 @@ const router = createBrowserRouter([
         element: <CommunityPrompt />
       },
       {
-        path: "explore",
-        element: <ExplorePage />,
+        path: 'explore-prompt',
+        element: <ExplorePrompt />
       },
     ]
   }

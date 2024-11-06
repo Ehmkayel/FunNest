@@ -1,9 +1,10 @@
 import React from 'react'
+import Explore from '../../../../components/Explore/Explore'
 
-const Explore = () => {
+const ExploreEvents = () => {
   return (
-    <div>Explore</div>
+    <Explore/>
   )
 }
 
-export default Explore
+export default ExploreEvents
