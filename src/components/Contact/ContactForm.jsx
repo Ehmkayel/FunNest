@@ -84,7 +84,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className='bg-primary shadow-lg rounded-lg p-4 xl:p-10 space-y-4 w-full max-w-xl mx-auto'>
+      <form onSubmit={handleSubmit} className='bg-primary shadow-lg rounded-lg p-4 xl:p-10 space-y-4 w-full max-w-[700px] mx-auto'>
         <h1 className='font-bold text-lg lg:text-[32px] leading-[30px] lg:leading-[44.8px]'>Leave a Message</h1>
         <div className='flex flex-col md:flex-row gap-[10px]'>
           <input
@@ -94,7 +94,7 @@ const ContactForm = () => {
             placeholder='Full Name'
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full max-w-[251px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[251px]'
           />
           {errors.fullName && <p className="text-red-500">{errors.fullName}</p>}
 
@@ -105,7 +105,7 @@ const ContactForm = () => {
             placeholder='Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full max-w-[251px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[251px]'
           />
           {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
@@ -117,7 +117,7 @@ const ContactForm = () => {
             placeholder='Phone Number'
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full max-w-[222px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[222px]'
           />
           {errors.phoneNumber && <p className="text-red-500">{errors.phoneNumber}</p>}
 
@@ -128,7 +128,7 @@ const ContactForm = () => {
             placeholder='Subject'
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full max-w-[280px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[280px]'
           />
           {errors.subject && <p className="text-red-500">{errors.subject}</p>}
         </div>
