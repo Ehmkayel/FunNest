@@ -5,6 +5,7 @@ import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import CommunityPrompt from "./pages/Dashboard/Community/CommunityPrompt";
+import ExplorePage from "./pages/Explore_Page/ExplorePage";
 import ParentDashboard from "./pages/Dashboard/ParentDashboard/ParentDashboard";
 import DashboardLayout from "./components/Layout/DashboardLayout";
 import Explore from "./pages/Dashboard/ParentDashboard/Explore/Explore";
@@ -74,7 +75,11 @@ const router = createBrowserRouter([
       {
         path: 'community-prompt',
         element: <CommunityPrompt />
-      }
+      },
+      {
+        path: "explore",
+        element: <ExplorePage />,
+      },
     ]
   }
 ]);
