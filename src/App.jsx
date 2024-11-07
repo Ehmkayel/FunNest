@@ -16,7 +16,16 @@ import EventsDetails from "./pages/Dashboard/ParentDashboard/Events/Events";
 import ExploreEvents from "./pages/Dashboard/ParentDashboard/Explore/Explore";
 import ExplorePrompt from "./pages/Dashboard/ParentDashboard/Explore/ExplorePrompt";
 
+
 const router = createBrowserRouter([
+  {
+    path: 'login',
+    element: <Login />
+  },
+  {
+    path: 'register',
+    element: <Register />
+  },
   {
     path: '/dashboard',
     element: <DashboardLayout />,
@@ -64,14 +73,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Landing />
       },
-      {
-        path: 'login',
-        element: <Login />
-      },
-      {
-        path: 'register',
-        element: <Register />
-      },
+    
       {
         path: 'community-prompt',
         element: <CommunityPrompt />
