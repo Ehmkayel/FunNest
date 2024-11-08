@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { setDoc, doc } from 'firebase/firestore'
+import { db } from '../../config/FirebaseConfig'
 
 const Modal = ({ message, onClose }) => {
   return (
@@ -60,11 +62,15 @@ const ContactForm = () => {
     setErrors({});
     setIsLoading(true);
 
-   
     try {
-      // await api.submitContactForm({ fullName, email, phoneNumber, subject, message });
-      console.log("Form submitted", { fullName, email, phoneNumber, subject, message });
-      setIsModalOpen(true); // Open the modal
+      await setDoc(doc(db, 'contactMessages', email), {
+        fullName,
+        email,
+        phoneNumber,
+        subject,
+        message,
+      });
+      setIsModalOpen(true); 
     } catch (error) {
       console.error('Error submitting form', error);
     } finally {
@@ -73,7 +79,6 @@ const ContactForm = () => {
   };
 
   const handleCloseModal = () => {
-    // Reset form fields
     setFullName('');
     setEmail('');
     setPhoneNumber('');
@@ -94,7 +99,7 @@ const ContactForm = () => {
             placeholder='Full Name'
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[251px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full '
           />
           {errors.fullName && <p className="text-red-500">{errors.fullName}</p>}
 
@@ -105,7 +110,7 @@ const ContactForm = () => {
             placeholder='Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[251px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full'
           />
           {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
@@ -117,7 +122,7 @@ const ContactForm = () => {
             placeholder='Phone Number'
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[222px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full'
           />
           {errors.phoneNumber && <p className="text-red-500">{errors.phoneNumber}</p>}
 
@@ -128,7 +133,7 @@ const ContactForm = () => {
             placeholder='Subject'
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full md:max-w-[280px]'
+            className='rounded-md border px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full '
           />
           {errors.subject && <p className="text-red-500">{errors.subject}</p>}
         </div>
@@ -139,7 +144,7 @@ const ContactForm = () => {
             placeholder='Type your message here'
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className='rounded-3xl border px-3 lg:px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full max-w-[512px] h-32 lg:h-48 '
+            className='rounded-3xl border px-3 lg:px-[21px] pt-3 pb-[13px] focus:outline-none focus:ring-1 focus:ring-[#AFAFAF] w-full h-32 lg:h-48 '
           />
           {errors.message && <p className="text-red-500">{errors.message}</p>}
         </div>

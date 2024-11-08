@@ -25,6 +25,12 @@ import literature_festival from "./literature_festival.png";
 import drum_dance from "./drum_dance.png";
 import yoga_retreat from "./yoga_retreat.png";
 import cooking_class from "./cooking_class.png";
+import ramadan_image from './ramadan.png'
+import moses_image from './moses.jpeg'
+import afolabi_image from './afolabi.jpeg'
+import sid_image from './sid.png'
+import todinmu_image from './todinmu.jpeg'
+import halimat from './halimat.webp'
 
 export const assets = {
   hero,
@@ -54,4 +60,10 @@ export const assets = {
   drum_dance,
   yoga_retreat,
   cooking_class,
+  ramadan_image,
+  moses_image,
+  afolabi_image,
+  sid_image,
+  todinmu_image,
+  halimat
 };

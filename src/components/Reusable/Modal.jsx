@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 const Modal = ({isOpen, closeModal, title, paragraph, children, className}) => {
   const handleClickOutside = (e) => {
@@ -25,7 +26,8 @@ const Modal = ({isOpen, closeModal, title, paragraph, children, className}) => {
 
 
   return (
-    <div className='fixed inset-0 z-50 flex justify-center items-center'>
+    <>
+      <div className='fixed inset-0 z-50 flex justify-center items-center'>
       <div className='modal-overlay bg-black fixed inset-0 opacity-50 z-40'></div>
       
       <div className={`modal-container max-w-[620px] bg-secondary rounded-lg shadow-md mx-auto flex items-center justify-center z-50 ${className}`}>
@@ -45,6 +47,8 @@ const Modal = ({isOpen, closeModal, title, paragraph, children, className}) => {
         </div>
       </div>
     </div>
+    </>
+    
   )
 }
 

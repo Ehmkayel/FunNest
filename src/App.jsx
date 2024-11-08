@@ -12,75 +12,73 @@ import Recommendations from "./pages/Dashboard/ParentDashboard/Recommendations/R
 import SafetyForm from "./pages/Dashboard/ParentDashboard/SafetyForm/SafetyForm";
 import Notification from "./pages/Dashboard/ParentDashboard/Notification";
 import Feedback from "./pages/Dashboard/ParentDashboard/Feedback/Feedback";
-import EventsDetails from "./pages/Dashboard/ParentDashboard/Events/Events";
 import ExploreEvents from "./pages/Dashboard/ParentDashboard/Explore/Explore";
 import ExplorePrompt from "./pages/Dashboard/ParentDashboard/Explore/ExplorePrompt";
+import EventDetails from "./pages/Dashboard/ParentDashboard/Explore/EventDetails";
 
 
 const router = createBrowserRouter([
   {
     path: 'login',
-    element: <Login />
+    element: <Login />,
   },
   {
     path: 'register',
-    element: <Register />
+    element: <Register />,
   },
   {
     path: '/dashboard',
-    element: <DashboardLayout />,
+    element: <DashboardLayout />, 
     children: [
       {
         index: true,
-        element: <ParentDashboard />
+        element: <ParentDashboard />,
       },
       {
-        path: 'events',
-        element: <EventsDetails />
+        path: 'event/:id', 
+        element: <EventDetails />,
       },
       {
         path: 'explore-events',
-        element: <ExploreEvents/>
+        element: <ExploreEvents />,
       },
       {
-        path: 'community',
-        element: <Community/>
+        path: 'community', 
+        element: <Community />,
       },
       {
-        path: 'recommendation',
-        element: <Recommendations/>
+        path: 'recommendation', 
+        element: <Recommendations />,
       },
       {
         path: 'safety-form',
-        element: <SafetyForm/>
+        element: <SafetyForm />,
       },
       {
-        path: 'notifications',
-        element: <Notification/>
+        path: 'notifications', 
+        element: <Notification />,
       },
       {
-        path: 'feedback',
-        element: <Feedback/>
+        path: 'feedback', 
+        element: <Feedback />,
       }
-
     ]
   },
   {
-    path: '/',
-    element: <Layout />,
+    path: '/', 
+    element: <Layout />, 
     children: [
       {
-        index: true,
-        element: <Landing />
+        index: true, 
+        element: <Landing />,
       },
-    
       {
         path: 'community-prompt',
-        element: <CommunityPrompt />
+        element: <CommunityPrompt />,
       },
       {
         path: 'explore-prompt',
-        element: <ExplorePrompt />
+        element: <ExplorePrompt />,
       },
     ]
   }

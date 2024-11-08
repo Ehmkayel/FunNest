@@ -91,6 +91,12 @@ export const eventsData = [
     description:
       "Join us for a day filled with exciting activities for children and a relaxing picnic by the lake. Enjoy games, face painting, and boat rides!",
     image: assets.picnic,
+    age_group: "All Ages",
+    organizer: "FunKids Ltd.",
+    ticket_price: "Free",
+    event_type: "Outdoor Activity",
+    duration: "4 hours",
+    contact_email: "info@funkids.com",
   },
   {
     id: 2,
@@ -100,6 +106,12 @@ export const eventsData = [
     description:
       "A vibrant art workshop where children can explore their creativity through various artistic expressions, including painting and crafting.",
     image: assets.art_workshop,
+    age_group: "5-12 years",
+    organizer: "ArtSpark Studios",
+    ticket_price: "₦1500",
+    event_type: "Workshop",
+    duration: "6 hours",
+    contact_email: "support@artspark.com",
   },
   {
     id: 3,
@@ -109,6 +121,12 @@ export const eventsData = [
     description:
       "Celebrate the holiday season with a family-friendly carnival featuring games, food stalls, live music, and fun activities for kids of all ages.",
     image: assets.holiday_festival,
+    age_group: "All Ages",
+    organizer: "Tarkwa Bay Events",
+    ticket_price: "₦2000",
+    event_type: "Carnival",
+    duration: "5 hours",
+    contact_email: "events@tarkwabay.com",
   },
   {
     id: 4,
@@ -118,6 +136,12 @@ export const eventsData = [
     description:
       "An educational camp that inspires children to explore the wonders of science through interactive exhibits and exciting experiments.",
     image: assets.discovery_camp,
+    age_group: "8-15 years",
+    organizer: "Science Explorers",
+    ticket_price: "₦3000",
+    event_type: "Educational Camp",
+    duration: "3 days",
+    contact_email: "contact@scienceexplorers.com",
   },
   {
     id: 5,
@@ -127,6 +151,12 @@ export const eventsData = [
     description:
       "Bring the family for a thrilling day of hiking and exploration at the scenic Idanre Hills. Perfect for nature lovers and adventurers!",
     image: assets.adventure_trek,
+    age_group: "All Ages",
+    organizer: "Nature Trek Adventures",
+    ticket_price: "₦5000",
+    event_type: "Outdoor Adventure",
+    duration: "1 day",
+    contact_email: "info@naturetrek.com",
   },
   {
     id: 6,
@@ -136,6 +166,12 @@ export const eventsData = [
     description:
       "Immerse your children in the magic of storytelling with live performances and book readings by popular Nigerian authors.",
     image: assets.literature_festival,
+    age_group: "5-10 years",
+    organizer: "Books and Tales",
+    ticket_price: "₦1200",
+    event_type: "Literature Festival",
+    duration: "4 hours",
+    contact_email: "events@booksandtales.com",
   },
   {
     id: 7,
@@ -145,6 +181,12 @@ export const eventsData = [
     description:
       "Kids can experience the joy of African music by learning basic drumming techniques and traditional dances from seasoned instructors.",
     image: assets.drum_dance,
+    age_group: "6-14 years",
+    organizer: "Cultural Beats",
+    ticket_price: "₦2000",
+    event_type: "Workshop",
+    duration: "3 hours",
+    contact_email: "info@culturalbeats.com",
   },
   {
     id: 8,
@@ -154,6 +196,12 @@ export const eventsData = [
     description:
       "A calming retreat designed to introduce children to yoga and mindfulness exercises, helping them relax and focus.",
     image: assets.yoga_retreat,
+    age_group: "7-12 years",
+    organizer: "ZenKids",
+    ticket_price: "₦2500",
+    event_type: "Wellness Retreat",
+    duration: "2 days",
+    contact_email: "support@zenkids.com",
   },
   {
     id: 9,
@@ -163,8 +211,15 @@ export const eventsData = [
     description:
       "Kids can join professional chefs for a hands-on cooking class, where they’ll learn to make fun and healthy meals.",
     image: assets.cooking_class,
-  }
+    age_group: "8-16 years",
+    organizer: "Chef's Academy",
+    ticket_price: "₦3500",
+    event_type: "Cooking Class",
+    duration: "3 hours",
+    contact_email: "academy@chefsacademy.com",
+  },
 ];
+
 
 
 export const images = [
