@@ -65,7 +65,7 @@ const Explore = () => {
           <div key={event.id} className="bg-white p-4 rounded-lg shadow-md">
             <Link to={`/dashboard/event/${event.id}`}>
               <img
-                src={event.image ? assets[event.image.split('/').pop().split('.')[0]] : assets.defaultImage}
+                src={event.image}
                 alt={event.title}
                 className="w-full h-48 object-cover rounded-md mb-4"
               />

@@ -5,7 +5,7 @@ import Loader from '../../../../components/Loader/Loader'
 const ExploreEvents = () => {
   return (
     <>
-      <Loader/>
+    <Loader/>
      <Explore/>
     </>
    
