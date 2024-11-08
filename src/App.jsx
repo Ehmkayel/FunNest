@@ -18,14 +18,7 @@ import EventDetails from "./pages/Dashboard/ParentDashboard/Explore/EventDetails
 
 
 const router = createBrowserRouter([
-  {
-    path: 'login',
-    element: <Login />,
-  },
-  {
-    path: 'register',
-    element: <Register />,
-  },
+
   {
     path: '/dashboard',
     element: <DashboardLayout />, 
@@ -79,6 +72,14 @@ const router = createBrowserRouter([
       {
         path: 'explore-prompt',
         element: <ExplorePrompt />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
       },
     ]
   }
