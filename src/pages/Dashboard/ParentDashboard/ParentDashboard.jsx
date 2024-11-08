@@ -1,11 +1,13 @@
 import React from 'react';
-import Sidebar from '../../../components/Sidebar/Sidebar';
+import Loader from '../../../components/Loader/Loader';
+import ExploreEvents from './Explore/Explore';
 
 
 const ParentDashboard = () => {
   return (
     <>
-       
+     <Loader/>
+     <ExploreEvents/>
     </>
   );
 };
