@@ -28,9 +28,6 @@ const Gallery = () => {
         }}
         pagination={{
           clickable: true,
-          renderBullet: (index, className) => {
-            return `<span class="${className}">${index + 1}</span>`
-          },
         }}
         breakpoints={{
           640: {
