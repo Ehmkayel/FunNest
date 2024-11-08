@@ -1,8 +1,13 @@
 import React from 'react'
+import Loader from '../../../../components/Loader/Loader'
+import ComingSoon from '../ComingSoon/ComingSoon'
 
 const Recommendations = () => {
   return (
-    <div>Recommendations</div>
+    <>
+    <Loader/>
+    <ComingSoon/>
+    </>
   )
 }
 

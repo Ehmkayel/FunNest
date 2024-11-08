@@ -63,7 +63,33 @@ html {
     border-bottom: 2px solid blue; 
     color: #facc15;
   }
+ 
+  .options {
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: #333;
+  }
+ 
+  .options a {
+    color: #007bff;
+    text-decoration: none;
+  }
+ 
+  .options a:hover {
+    text-decoration: underline;
+  }
 
-
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
 
   

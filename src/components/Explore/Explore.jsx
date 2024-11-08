@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { eventsData } from "../Data/Data";
 import { assets } from '../../assets/assets';
+import { Link } from 'react-router-dom'; 
 
 const Explore = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -62,25 +63,28 @@ const Explore = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredEvents.map(event => (
           <div key={event.id} className="bg-white p-4 rounded-lg shadow-md">
-            <img
-              src={event.image ? assets[event.image.split('/').pop().split('.')[0]] : assets.defaultImage}
-              alt={event.title}
-              className="w-full h-48 object-cover rounded-md mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-            <p className="text-gray-600 mb-1">{event.date} • {event.location}</p>
-            
-            {/* Conditionally render the description */}
-            {visibleDescriptions[event.id] && (
-              <p className="text-gray-800 mb-4">{event.description}</p>
-            )}
-            
-            <button
+            <Link to={`/dashboard/event/${event.id}`}>
+              <img
+                src={event.image ? assets[event.image.split('/').pop().split('.')[0]] : assets.defaultImage}
+                alt={event.title}
+                className="w-full h-48 object-cover rounded-md mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
+              <p className="text-gray-600 mb-1">{event.date} • {event.location}</p>
+              <button
               onClick={() => toggleDescription(event.id)}
               className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
             >
               {visibleDescriptions[event.id] ? "Hide Details" : "View Details"}
             </button>
+            </Link> 
+
+            {/* Conditionally render the description */}
+            {visibleDescriptions[event.id] && (
+              <p className="text-gray-800 mb-4">{event.description}</p>
+            )}
+
+          
           </div>
         ))}
       </div>

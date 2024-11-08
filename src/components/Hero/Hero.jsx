@@ -1,17 +1,12 @@
-import React from "react";
-import Button from "../Reusable/Button";
-import { assets } from "../../assets/assets";
-import { Link } from "react-router-dom";
+import React from "react"
+import Button from "../Reusable/Button"
+import { assets } from "../../assets/assets"
+import { Link } from "react-router-dom"
 
 
 const Hero = () => {
   return (
     <main className="bg-primary px-4 lg:px-[3rem] xl:px-[5rem] pt-[5rem] md:pt-0 relative">
-      {/* Particles Component in the background */}
-      <div className="absolute inset-0 z-0">
-       
-      </div>
-
       <section className="flex flex-col md:flex-row h-[700px] md:h-[600px] xl:h-[700px] items-center container justify-between max-w-[1440px] w-full mx-auto relative z-10">
         <figcaption className="text-white w-full md:w-[50%] text-center md:text-start">
           <h1 className="text-2xl md:text-4xl font-bold mb-4 heading">
